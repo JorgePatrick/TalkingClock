@@ -27,15 +27,17 @@ public class TakingClockTest {
 
     private static Stream<Arguments> provide24HourTimesForSpokenTime() {
         return Stream.of(
+                Arguments.of("11:45", "It's fifteen to twelve pm"),
                 Arguments.of("00:00", "It's twelve am"),
-                Arguments.of("01:30", "It's twelve am"),
-                Arguments.of("12:05", "It's twelve am"),
-                Arguments.of("14:01", "It's twelve am"),
-                Arguments.of("20:29", "It's twelve am"),
-                Arguments.of("21:00", "It's twelve am"),
-                Arguments.of("00:00", "It's twelve am"),
-                Arguments.of("00:00", "It's twelve am"),
-                Arguments.of("00:00", "It's twelve am")
+                Arguments.of("01:30", "It's one thirty am"),
+                Arguments.of("12:05", "It's twelve oh five pm"),
+                Arguments.of("14:01", "It's two oh one pm"),
+                Arguments.of("20:29", "It's eight twenty nine pm"),
+                Arguments.of("09:35", "It's twenty five to ten am"),
+                Arguments.of("10:40", "It's twenty to eleven am"),
+                Arguments.of("12:50", "It's ten to one pm"),
+                Arguments.of("13:55", "It's five to two pm"),
+                Arguments.of("21:00", "It's nine pm")
         );
     }
 
