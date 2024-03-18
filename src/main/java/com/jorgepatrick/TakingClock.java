@@ -1,16 +1,14 @@
 package com.jorgepatrick;
 
-import java.sql.Time;
-
 public class TakingClock {
     private final TwentyFourHourTime twentyFourHourtime;
 
-    public TakingClock(TwentyFourHourTime twentyFourHourtime) {
-        this.twentyFourHourtime = twentyFourHourtime;
+    public TakingClock(TwentyFourHourTime twentyFourHourTime) {
+        this.twentyFourHourtime = twentyFourHourTime;
     }
 
-    public String talkTime(String writenTime) {
-        String spokenTime = twentyFourHourtime.translateToSpoken(writenTime);
+    public String talkTime(String writtenTime) {
+        String spokenTime = twentyFourHourtime.getSpokenTime(writtenTime);
         return "It's " + spokenTime;
     }
 }
